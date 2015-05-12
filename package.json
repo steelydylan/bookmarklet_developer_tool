@@ -1,6 +1,8 @@
 {
-	"description": "for bookmarklet development",
-	"dependency":{
+	"version": "0.0.1",
+  	"name": "bookmarklet_developer_tool",
+	"description": "for easier bookmarklet development",
+	"dependencies":{
 		"gulp":"*",
 		"gulp-uglify":"*",
 		"gulp-watch":"*",
@@ -8,10 +10,15 @@
 		"gulp-replace":"*",
 		"gulp-connect":"*"
 	},
+	"repository": {
+  		"type": "git",
+  		"url": "https://github.com/steelydylan/bookmarklet_developer_tool.git"
+	},
 	"settings":{
-		"port":"8001",
+		"port":"8002",
 		"src":"src",
 		"dest":"dest",
+		"https":false,
 		"js":"formChecker.js"
 	}
 }
