@@ -1,0 +1,17 @@
+{
+	"description": "for bookmarklet development",
+	"dependency":{
+		"gulp":"*",
+		"gulp-uglify":"*",
+		"gulp-watch":"*",
+		"gulp-rename":"*",
+		"gulp-replace":"*",
+		"gulp-connect":"*"
+	},
+	"settings":{
+		"port":"8001",
+		"src":"src",
+		"dest":"dest",
+		"js":"formChecker.js"
+	}
+}
