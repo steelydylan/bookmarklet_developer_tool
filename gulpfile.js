@@ -15,11 +15,18 @@ gulp.task("bookmarklet",function(){
         .pipe(gulp.dest(settings.dest))
 });
 gulp.task("default",function(){
-	connect.server({
-		root:settings.dest,
-		port:settings.port,
-		https:settings.https
-	});
+	if(settings.https){
+		connect.server({
+			root:settings.dest,
+			port:settings.port,
+			https:true
+		});
+	}else{
+		connect.server({
+			root:settings.dest,
+			port:settings.port
+		});
+	}
 	var string = source.replace("<%=port%>",settings.port);
 	string = string.replace("<%=js%>",settings.js);
 	var protocol = settings.https ? "https" : "http";
